@@ -22,22 +22,5 @@ pipeline {
         }
 
         
-        /*stage ('Functional tests') {
-            steps {
-                sh 'mvn clean install'
-            }
-            post {
-                success {
-                    junit '**/target/*-reports/*.xml'
-                    jacoco(execPattern: 'ft-staging/target/jacoco.exec')
-                    archive "ft-staging/target/**/*"
-                }
-            }
-        }*/
-        /*stage ('Stop tomcat') {
-            steps {
-                sh 'ssh ${CONN} "${TOMCAT_HOME}/bin/catalina.sh stop"'
-            }
-        }*/
     }
 }
